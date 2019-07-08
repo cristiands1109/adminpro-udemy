@@ -1,3 +1,43 @@
-<p>
-  progress works!
-</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Barra de progreso</h5>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" [attr.valuenow]="porcentaje1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje1 + '%'" style="width: 50%"></div>
+                </div>
+                <br>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.valuenow]="porcentaje2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="porcentaje2 + '%'" style="width: 50%"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <!-- <div class="input-group">
+                    <input type="text" class="form-control" name="porcentaje" [(ngModel)]="porcentaje" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                    <div class="input-group-append" id="button-addon4">
+                        <button class="btn btn-outline-primary" (click)="cambiarvalor(+5)" type="button"><i class="mdi mdi-plus-box"></i></button>
+                        <button class="btn btn-outline-primary" (click)="cambiarvalor(-5)" type="button"><i class="mdi mdi-minus-box"></i></button>
+                    </div>
+                </div>  -->
+                <app-incrementador (actualizaValor)="porcentaje1 = $event" nombre="Progress Azul" [porcentaje]="porcentaje1"></app-incrementador>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementador (actualizaValor)="porcentaje2 = $event" nombre="Progress Verde" [porcentaje]="porcentaje2"></app-incrementador>
+            </div>
+        </div>
+    </div>
+</div>
