@@ -16,6 +16,9 @@ import { RegisterComponent } from './login/register.component';
 // rutas
 import { APP_ROUTING } from './app.routes';
 
+// servicios
+import { ServiceModule } from './services/service.module';
+
 
 
 @NgModule({
@@ -28,7 +31,8 @@ import { APP_ROUTING } from './app.routes';
     BrowserModule,
     APP_ROUTING,
     PageModule,
-    FormsModule
+    FormsModule,
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

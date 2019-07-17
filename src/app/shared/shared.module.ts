@@ -7,6 +7,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
+// para que funcione el routerlink
+import { RouterModule } from '@angular/router';
+
+// para que no tenga problemas el *ngfor 
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
     declarations: [
@@ -21,7 +27,10 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
         NopagefoundComponent,
         HeaderComponent
     ],
-    imports: [],
+    imports: [
+        RouterModule,
+        CommonModule
+    ],
     providers: [],
 })
 export class SharedModule { }
