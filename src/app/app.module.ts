@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 
 
 // Modulos
 import { PageModule } from './pages/pages.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 
 // componentes
@@ -32,6 +34,7 @@ import { ServiceModule } from './services/service.module';
     APP_ROUTING,
     PageModule,
     FormsModule,
+    ReactiveFormsModule,
     ServiceModule
   ],
   providers: [],
