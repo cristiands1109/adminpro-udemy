@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 // Guards
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const pagesRoutes: Routes = [
     {
@@ -27,6 +28,9 @@ const pagesRoutes: Routes = [
             { path: 'rxjs', component: RxjsComponent, data: {tiutlo: 'Observables'} },
             { path: 'account-settings', component: AccountSettingsComponent, data: {tiutlo: 'Configuración'} },
             { path: 'perfil', component: ProfileComponent, data: {tiutlo: 'Perfil del Usuario'} },
+
+            // Mantenimiento
+            { path: 'usuarios', component: UsuariosComponent, data: {tiutlo: 'Mantenimiento de Usuarios'} },
             { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
         ]
     }
