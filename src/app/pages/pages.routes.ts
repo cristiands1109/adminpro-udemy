@@ -10,6 +10,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 // Guards
 import { LoginGuardGuard } from '../services/guards/login-guard.guard';
@@ -19,6 +20,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { AdminGuard } from '../services/services.index';
 
 const pagesRoutes: Routes = [
     {
@@ -33,9 +35,10 @@ const pagesRoutes: Routes = [
             { path: 'rxjs', component: RxjsComponent, data: {tiutlo: 'Observables'} },
             { path: 'account-settings', component: AccountSettingsComponent, data: {tiutlo: 'Configuración'} },
             { path: 'perfil', component: ProfileComponent, data: {tiutlo: 'Perfil del Usuario'} },
+            { path: 'busqueda/:termino', component: BusquedaComponent, data: {tiutlo: 'Buscador'} },
 
             // Mantenimiento
-            { path: 'usuarios', component: UsuariosComponent, data: {tiutlo: 'Mantenimiento de Usuarios'} },
+            { path: 'usuarios', component: UsuariosComponent, canActivate: [AdminGuard ], data: {tiutlo: 'Mantenimiento de Usuarios'} },
             { path: 'hospitales', component: HospitalesComponent, data: {tiutlo: 'Mantenimiento de Hospitales'} },
             { path: 'medicos', component: MedicosComponent, data: {tiutlo: 'Mantenimiento de Medicos'} },
             { path: 'medico/:id', component: MedicoComponent, data: {tiutlo: 'Actualizar Medico'} },
