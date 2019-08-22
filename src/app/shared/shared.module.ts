@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 
 // Pipes
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 
 
@@ -23,13 +24,15 @@ import { PipesModule } from '../pipes/pipes.module';
         SidebarComponent,
         BreadcrumbsComponent,
         NopagefoundComponent,
-        HeaderComponent
+        HeaderComponent,
+        ModalUploadComponent
     ],
     exports: [
         SidebarComponent,
         BreadcrumbsComponent,
         NopagefoundComponent,
-        HeaderComponent
+        HeaderComponent,
+        ModalUploadComponent
     ],
     imports: [
         RouterModule,
